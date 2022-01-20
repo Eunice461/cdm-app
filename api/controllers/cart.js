@@ -1,18 +1,18 @@
 
 
-const createCart = (req, res) => {
-    res.send('crated')
-}
-const updateCart = (req, res) => {
-    res.send('updated')
-}
-const deleteCart = (req, res) => {
+const createCart = async (req, res) => {
+	res.send("crated");
+};
+const updateCart = async (req, res) => {
+	res.send("updated");
+};
+const deleteCart = async (req, res) => {
 	res.send("deleted");
 };
-const getUserCart = (req, res) => {
+const getUserCart = async (req, res) => {
 	res.send("get");
 };
-const getAllCart = (req, res) => {
+const getAllCart = async (req, res) => {
 	res.send("all");
 };
 

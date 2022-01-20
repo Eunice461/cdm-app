@@ -1,22 +1,26 @@
-const createProduct = (req, res) => {
-    res.send('created')
-}
+const createProduct = async (req, res) => {
+	res.send("created");
+};
 
-const getAllProduct = (req, res) => {
+const getAllProduct = async (req, res) => {
 	res.send("all");
 };
 
-const getSingleProduct = (req, res) => {
+const getSingleProduct = async (req, res) => {
 	res.send("single");
 };
 
-const updateProduct = (req, res) => {
+const updateProduct = async (req, res) => {
 	res.send("updated");
 };
 
-const deleteProduct = (req, res) => {
+const deleteProduct = async (req, res) => {
 	res.send("dleted");
 };
+
+const uploadImage = async (req, res) => {
+    res.send('uploaded')
+}
 
 module.exports = {
     createProduct,

@@ -1,24 +1,24 @@
-const createOrder = (req, res) => {
-    res.send('created')
-}
+const createOrder = async (req, res) => {
+	res.send("created");
+};
 
-const getAllOrder = (req, res) => {
+const getAllOrder = async (req, res) => {
 	res.send("get all");
 };
 
-const getSingleOrder = (req, res) => {
+const getSingleOrder = async (req, res) => {
 	res.send("single");
 };
 
-const getCurrentUserOrder = (req, res) => {
+const getCurrentUserOrder = async (req, res) => {
 	res.send("current user");
 };
 
-const updateOrder = (req, res) => {
+const updateOrder = async (req, res) => {
 	res.send("updated");
 };
 
-const deleteOrder = (req, res) => {
+const deleteOrder = async (req, res) => {
 	res.send("dleted");
 };
 

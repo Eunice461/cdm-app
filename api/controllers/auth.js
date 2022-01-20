@@ -1,14 +1,14 @@
-const register = (req, res) => {
-    res.send('register')
-}
+const register = async (req, res) => {
+	res.send("register");
+};
 
-const login = (req, res) => {
-    res.send('login')
-}
+const login = async (req, res) => {
+	res.send("login");
+};
 
-const logout = (req, res) => {
-    res.send('logout')
-}
+const logout = async (req, res) => {
+	res.send("logout");
+};
 module.exports = {
     register,
     login,
