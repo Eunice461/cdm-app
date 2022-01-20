@@ -7,7 +7,7 @@ const rateLimiter = require('express-rate-limit')
 const connectDB = require('./db/connect')
 
 //  routers
-const authRouter = require('./routes/authRoutes');
+const authRouter = require('./routes/auth');
 
 // to handle error
 const notFound = require('./middleware/notFound')
@@ -16,8 +16,15 @@ const notFound = require('./middleware/notFound')
 const fileUpload = require('express-fileupload')
 
 //MIDDLEWARE
+app.set("trust proxy", 1);
+app.use(
+	rateLimiter({
+		windowMs: 15 * 60 * 1000, // 15 minutes
+		max: 100, // limit each IP to 100 requests per windowMs
+	})
+);
+
 app.use(express.json());
-app.use(cookieParser(process.env.JWT_SECRET));
 
 app.use(express.static("./public"));
 app.use(fileUpload());
