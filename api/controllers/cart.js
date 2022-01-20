@@ -16,7 +16,7 @@ const getAllCart = (req, res) => {
 	res.send("all");
 };
 
-module.export = {
+module.exports = {
     createCart,
     updateCart,
     deleteCart,
