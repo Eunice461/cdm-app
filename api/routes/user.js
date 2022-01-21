@@ -7,17 +7,17 @@ const {
 const {
 	getAllUsers,
 	getSingleUser,
-	showCurrentUser,
+	getCurrentUser,
 	updateUser,
 	updateUserPassword,
     deleteUser,
-} = require("../controllers/userController");
+} = require("../controllers/user");
 
 router
 	.route("/")
 	.get(authenticateUser, authorizePermissions("admin"), getAllUsers);
 
-router.route("/showMe").get(authenticateUser, showCurrentUser);
+router.route("/showMe").get(authenticateUser, getCurrentUser);
 router.route("/updateUser").patch(authenticateUser, updateUser);
 router.route("/updateUserPassword").patch(authenticateUser, updateUserPassword);
 

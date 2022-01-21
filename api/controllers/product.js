@@ -2,7 +2,7 @@ const createProduct = async (req, res) => {
 	res.send("created");
 };
 
-const getAllProduct = async (req, res) => {
+const getAllProducts = async (req, res) => {
 	res.send("all");
 };
 
@@ -23,11 +23,12 @@ const uploadImage = async (req, res) => {
 }
 
 module.exports = {
-    createProduct,
-    getAllProduct,
-    getSingleProduct,
-    updateProduct,
-    deleteProduct,
-}
+	createProduct,
+	getAllProducts,
+	getSingleProduct,
+	updateProduct,
+	deleteProduct,
+	uploadImage,
+};
 
 

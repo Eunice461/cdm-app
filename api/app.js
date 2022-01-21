@@ -6,6 +6,9 @@ const rateLimiter = require('express-rate-limit')
 // to connect my DB
 const connectDB = require('./db/connect')
 
+//cookies
+const cookieParser = require('cookie-parser')
+
 //  routers
 const authRouter = require("./routes/auth");
 const userRouter = require("./routes/user");
@@ -27,7 +30,7 @@ app.use(
 );
 
 app.use(express.json());
-
+app.use(cookieParser(process.env.JWT_SECRET));
 app.use(express.static("./public"));
 app.use(fileUpload());
 

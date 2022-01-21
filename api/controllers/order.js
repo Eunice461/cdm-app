@@ -2,7 +2,7 @@ const createOrder = async (req, res) => {
 	res.send("created");
 };
 
-const getAllOrder = async (req, res) => {
+const getAllOrders = async (req, res) => {
 	res.send("get all");
 };
 
@@ -10,7 +10,7 @@ const getSingleOrder = async (req, res) => {
 	res.send("single");
 };
 
-const getCurrentUserOrder = async (req, res) => {
+const getCurrentUserOrders = async (req, res) => {
 	res.send("current user");
 };
 
@@ -24,9 +24,9 @@ const deleteOrder = async (req, res) => {
 
 module.exports = {
     createOrder,
-    getAllOrder,
+    getAllOrders,
     getSingleOrder,
-    getCurrentUserOrder,
+    getCurrentUserOrders,
     updateOrder,
     deleteOrder,
 }

@@ -11,7 +11,7 @@ const {
 	getCurrentUserOrders,
 	createOrder,
 	updateOrder,
-} = require("../controllers/orderController");
+} = require("../controllers/order");
 
 router
 	.route("/")
