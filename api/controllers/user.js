@@ -59,15 +59,15 @@ const updateUserPassword = async (req, res) => {
 	res.status(StatusCodes.OK).json({ msg: "Success! Password Updated." });
 };
 const deleteUser = async (req, res) => {
-    const user = await User.findByIdAndDelete(req.params.id)
-    res.status(StatusCodes.OK).json('user have been deleted...');
+    const { id: userId } = req.params;
 
-	// try {
-	// 	await User.findByIdAndDelete(req.params.id);
-	// 	res.status(200).json("User has been deleted...");
-	// } catch (err) {
-	// 	res.status(500).json(err);
-	// }
+		const user = await User.findOne({ _id: userId });
+	if (!user) {
+    throw new CustomError.NotFoundError(`No user with id : ${userId}`);
+  }
+
+  await user.remove();
+  res.status(StatusCodes.OK).json({ msg: 'Success! User removed.' });
 };
 
 module.exports = {
